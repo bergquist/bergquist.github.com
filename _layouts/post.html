@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article>
+  <hgroup>
+    <h1>{{ page.title }}</h2>
+    <h2>
+      <time class="publish_date" datetime="{{ post.date | date_to_xmlschema }}" pubdate="true">
+        {{ post.date_to_string }}
+      </time>
+    </h2>
+  </hgroup>
+
+	{{ content }}
+</article>
