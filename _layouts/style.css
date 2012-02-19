@@ -20,22 +20,9 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, audio, canvas, details, figcaption,
 figure, footer, header, hgroup, mark, menu, meter, nav,
 output, progress, section, summary, time, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-
+	margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
 body { line-height: 1; }
-
-article, aside, dialog, figure, footer, header, 
-hgroup, nav, section, blockquote { 
-	display: block;
-}
-
+article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote { display: block; }
 nav ul { list-style: none; }
 ol { list-style: decimal; }
 ul { list-style: disc; }
@@ -92,13 +79,13 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 /* print  */
 @media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
   a, a:visited { text-decoration: underline; }
   a[href]:after { content: " (" attr(href) ")"; }
   abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
+  thead { display: table-header-group; } 
   tr, img { page-break-inside: avoid; }
   img { max-width: 100% !important; }
   @page { margin: 0.5cm; }
@@ -106,7 +93,8 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
   h2, h3 { page-break-after: avoid; }
 }
 
-body { background-color: #ddd ; font-family: sans-serif; color: #222; }
+/* my styles */
+body { background-color: #000 ; font-family: sans-serif; color: #222; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
