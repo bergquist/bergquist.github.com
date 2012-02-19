@@ -94,7 +94,7 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 }
 
 /* my styles */
-body { background-color: #000 ; font-family: sans-serif; color: #222; }
+body { background-color: #ddd ; font-family: sans-serif; color: #222; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
