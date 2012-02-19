@@ -6,8 +6,8 @@ layout: default
   <hgroup>
     <h1>{{ page.title }}</h2>
     <h2>
-      <time class="publish_date" datetime="{{ page.date | date_to_string }}" pubdate="true">
-        {{ page.date_to_string }}
+      <time class="publish_date" datetime="{{ page.date | date: '%Y %b %d' }}" pubdate="true">
+        {{ page.date | date: '%Y %b %d' }}
       </time>
     </h2>
   </hgroup>
