@@ -8,6 +8,7 @@ layout: default
     <h2>
       <time class="publish_date" datetime="{{ post.date | date_to_string }}" pubdate="true">
         {{ post.date_to_string }}
+        {{ page.date | date: '%a, %d %b %Y' }}
       </time>
     </h2>
   </hgroup>
