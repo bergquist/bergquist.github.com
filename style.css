@@ -99,17 +99,26 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 body { 
-  background-color: #F0F0F0 ; 
+  background: url('background.png'); 
   font-family: sans-serif; 
   color: #222; 
   width: 600px;
   margin: 0 auto;
 }
 
-header { margin-top: 20px; }
+header { margin: 20px; }
 header h1 { font-size: 24px; line-height: 2; }
-article { text-align: justify; background-color: #fff; }
-
+article { 
+  padding: 10px; 
+  text-align: justify; 
+  background-color: #fff; 
+  font-size: 75%; 
+  border: 1px solid #a0a0a0;
+}
+article h2 { font-size: 190%;}
+article hgroup { margin-bottom: 10px;}
+article pre { margin: 5px 0; }
+footer { font-size: 80%; text-align: center; margin-top: 10px; color: #a0a0a0; }
 
 
 
