@@ -37,9 +37,9 @@ table { border-collapse: collapse; border-spacing: 0; }
 hr { display: block;height: 1px; border: 0;	border-top: 1px solid #ccc;	margin: 1em 0; padding: 0; }
 input[type="submit"], input[type="button"], button { padding: 0 !important; margin: 0 !important; }
 input, select, a img { vertical-align: middle; }
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #111; text-decoration: none; }
+a:visited { color: #111; text-decoration: none; }
+a:hover { color: #111; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
@@ -95,8 +95,8 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 /* my styles */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #ee7544; color: #fff; text-shadow: none; }
+::selection { background: #ee7544; color: #fff; text-shadow: none; }
 
 body { 
   background: url('background.png'); 
@@ -109,7 +109,7 @@ body {
 header { margin: 20px; }
 header h1 { font-size: 24px; line-height: 2; }
 header li { display: inline; float: right; margin-left: 5px;}
-article { 
+section, article { 
   padding: 10px; 
   text-align: justify; 
   background-color: #fff; 
