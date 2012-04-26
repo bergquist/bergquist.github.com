@@ -118,10 +118,6 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
   body { width: 600px; }  
 }
 
-@media only screen and (min-width: 800px) {
-  body { width: 600px; }  
-}
-
 @media only screen and (max-width: 500px) {
   .top-navigation { display: none; }
 }
@@ -131,34 +127,35 @@ body {
   font-family: sans-serif; 
   color: #222; 
   margin: 0 auto;
+  font-size: 20px;
 }
 
 header { margin: 20px; }
-header h1 { font-size: 24px; line-height: 2; }
+header h1 { font-size: 1.4em; line-height: 2; }
 header li { display: inline; float: right; margin-left: 5px; }
+header p { font-size: 0.7em;}
+
+.top-navigation { padding: 3px;}
 
 section, article { 
   padding: 10px; 
-  text-align: justify; 
+  text-align: justify;
   background-color: #fff; 
   font-size: 75%; 
   border: 1px solid #a0a0a0;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  box-shadow: 3px 6px 9px #555;
 }
-article h2 { font-size: 190%;}
+
+article p { font-size: 1em; }
+article code { font-size: 0.7em;}
+article h2 { font-size: 2em; padding-bottom: 3px; }
 article hgroup { margin-bottom: 10px;}
-article pre { margin: 5px 0; }
-footer { font-size: 80%; text-align: center; margin-top: 10px; color: #a0a0a0; }
+footer { font-size: 0.7em; text-align: center; margin-top: 10px; color: #a0a0a0; }
 
-
-
-
-
-
-
-
-
-
-
+pre.prettyprint {
+  overflow-x: auto;
+  margin: 5px 0;
+}
 
