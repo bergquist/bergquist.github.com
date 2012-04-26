@@ -127,13 +127,13 @@ body {
   font-family: sans-serif; 
   color: #222; 
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 header { margin: 20px; }
 header h1 { font-size: 1.4em; line-height: 2; }
 header li { display: inline; float: right; margin-left: 5px; }
-header p { font-size: 0.7em;}
+header p { font-size: 0.9em;}
 
 .top-navigation { padding: 3px;}
 
@@ -141,16 +141,15 @@ section, article {
   padding: 10px; 
   text-align: justify;
   background-color: #fff; 
-  font-size: 75%; 
   border: 1px solid #a0a0a0;
   -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: 3px 6px 9px #555;
 }
 
-article p { font-size: 1em; }
-article code { font-size: 0.7em;}
+article code { font-size: 0.7em; padding-left: 5px; }
 article h2 { font-size: 2em; padding-bottom: 3px; }
+article time { font-size: 0.8em; }
 article hgroup { margin-bottom: 10px;}
 footer { font-size: 0.7em; text-align: center; margin-top: 10px; color: #a0a0a0; }
 
