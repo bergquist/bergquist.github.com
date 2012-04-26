@@ -98,17 +98,45 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 ::-moz-selection { background: #ee7544; color: #fff; text-shadow: none; }
 ::selection { background: #ee7544; color: #fff; text-shadow: none; }
 
+@media only screen and (min-width: 300px) {
+  body { width: 95%; }
+}
+
+@media only screen and (min-width: 400px) {
+  body { width: 95%; }  
+}
+
+@media only screen and (min-width: 500px) {
+  body { width: 95%; }  
+}
+
+@media only screen and (min-width: 600px) {
+  body { width: 95%; }  
+}
+
+@media only screen and (min-width: 700px) {
+  body { width: 600px; }  
+}
+
+@media only screen and (min-width: 800px) {
+  body { width: 600px; }  
+}
+
+@media only screen and (max-width: 500px) {
+  .top-navigation { display: none; }
+}
+
 body { 
   background: url('background.png'); 
   font-family: sans-serif; 
   color: #222; 
-  width: 600px;
   margin: 0 auto;
 }
 
 header { margin: 20px; }
 header h1 { font-size: 24px; line-height: 2; }
-header li { display: inline; float: right; margin-left: 5px;}
+header li { display: inline; float: right; margin-left: 5px; }
+
 section, article { 
   padding: 10px; 
   text-align: justify; 
