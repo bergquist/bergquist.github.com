@@ -1,0 +1,33 @@
+---
+layout: post
+title: How to extend an array with an array in javascript
+---
+
+I was working on a small side project where I wanted to extend and javascript array with another javascript array. So I found this Stackoverflow question an it put a smile on my face because I think this is a good example of the power javascript provides.
+
+http://stackoverflow.com/a/1374131/79941
+
+So I'm gonna try to explain how it works.
+push() adds and element to an array ex
+
+var a = [ 1, 2 ]
+a.push(3)
+a
+>>> [ 1, 2, 3 ]
+
+But you can also give push more parameters. ex
+
+var a = [ 1, 2 ]
+a.push(3, 4)
+a
+>>> [ 1, 2, 3, 4 ]
+
+What apply does is that it allow you to execute an mehtod on another object. ex
+var sparkles = {
+    name: 'sparkles'
+}
+
+var rainbowdash = {
+    name: 'rainbowdash'
+}
+
