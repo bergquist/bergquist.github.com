@@ -1,0 +1,30 @@
+{
+  "name": "bergquist.github.com",
+  "version": "0.0.0",
+  "description": "me blog",
+  "main": "Gruntfile.js",
+  "private": true,
+  "Dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "connect-livereload": "~0.2.0",
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~0.1.12",
+    "matchdep": "~0.1.2",
+    "grunt-jekyll": "~0.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carl Bergquist",
+  "license": "BSD"
+}
