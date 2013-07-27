@@ -1,15 +1,15 @@
 'use strict';
-var liveReloadPort = 35729;
+var liveReloadPort = 35729
 var lrSnippet = require('connect-livereload')({
   port: liveReloadPort
-});
+})
 var mountFolder = function(connect, dir) {
-  return connect.static(require('path').resolve(dir));
-};
+  return connect.static(require('path').resolve(dir))
+}
 var yeomanConfig = {
   app: 'app',
   dist: 'dist'
-};
+}
 
 module.exports = function(grunt) {
   grunt.initConfig({
@@ -26,16 +26,11 @@ module.exports = function(grunt) {
             '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
             '<%= yeoman.app %>/image/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
-      },
-      compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server']
       }
     },
     connect: {
       options: {
         port: 9000,
-        // Change hostname to null to access the server from outside.
         hostname: 'localhost'
       },
       livereload: {
@@ -45,7 +40,7 @@ module.exports = function(grunt) {
               lrSnippet,
               mountFolder(connect, '.tmp'),
               mountFolder(connect, '_site'),
-              mountFolder(connect, yeomanConfig.app)];
+              mountFolder(connect, yeomanConfig.app)]
           }
         }
       },
@@ -54,7 +49,7 @@ module.exports = function(grunt) {
           middleware: function(connect) {
             return [
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')];
+              mountFolder(connect, 'test')]
           }
         }
       },
@@ -62,7 +57,7 @@ module.exports = function(grunt) {
         options: {
           middleware: function(connect) {
             return [
-              mountFolder(connect, yeomanConfig.dist)];
+              mountFolder(connect, yeomanConfig.dist)]
           }
         }
       }
@@ -90,7 +85,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'style.min.css': [
-              '.tmp/{,*/}*.css'
+              '.tmp/css/{,*/}*.css'
           ]
         }
       }
@@ -101,18 +96,15 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'css',
           src: ['style.scss'],
-          dest: '.tmp/',
+          dest: '.tmp/css',
           ext: '.css'
         }]
       }
     }
-  });
+  })
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
-  grunt.registerTask('default', [
-    'clean',
-    'sass',
-    'cssmin'
-  ]);
-};
+  grunt.registerTask('default', [ 'clean', 'sass', 'cssmin' ])
+  grunt.registerTask('server', [ 'default', 'connect', 'open', 'watch' ])
+}
