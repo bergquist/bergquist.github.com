@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           livereload: liveReloadPort
         },
         files: [
-            '.jekyll/**/*.html',
+            '_site/**/*.html',
             '.tmp/css/**/*.css',
             '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
             '<%= yeoman.app %>/image/**/*.{gif,jpg,jpeg,png,svg,webp}'
@@ -30,34 +30,15 @@ module.exports = function(grunt) {
     },
     connect: {
       options: {
-        port: 9000,
-        hostname: 'localhost'
+        port: 9000
       },
       livereload: {
         options: {
           middleware: function(connect) {
             return [
               lrSnippet,
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, '_site'),
-              mountFolder(connect, yeomanConfig.app)]
-          }
-        }
-      },
-      test: {
-        options: {
-          middleware: function(connect) {
-            return [
-              mountFolder(connect, '.tmp'),
-              mountFolder(connect, 'test')]
-          }
-        }
-      },
-      dist: {
-        options: {
-          middleware: function(connect) {
-            return [
-              mountFolder(connect, yeomanConfig.dist)]
+              mountFolder(connect, '_site')
+              ]
           }
         }
       }
@@ -78,7 +59,7 @@ module.exports = function(grunt) {
     },
     open: {
       server: {
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: 'http://localhost:<%= connect.options.port %>/index.htm'
       }
     },
     cssmin: {
@@ -91,7 +72,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'css',
-          src: ['style.scss'],
+          src: [ 'style.scss' ],
           dest: '.tmp/css',
           ext: '.css'
         }]
@@ -102,5 +83,11 @@ module.exports = function(grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
   grunt.registerTask('default', [ 'clean', 'sass', 'cssmin' ])
-  grunt.registerTask('server', [ 'default', 'connect', 'open', 'watch' ])
+  grunt.registerTask('dev', [
+    'connect:livereload',
+    'open',
+    'watch'
+  ])
+  grunt.registerTask('build', [])
+  grunt.registerTask('deploy', [])
 }
