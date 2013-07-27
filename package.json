@@ -1,6 +1,6 @@
 {
   "name": "bergquist.github.com",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "me blog",
   "main": "Gruntfile.js",
   "private": true,
@@ -20,7 +20,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~0.1.12",
     "matchdep": "~0.1.2",
-    "grunt-jekyll": "~0.3.6"
+    "grunt-contrib-sass": "~0.4.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
