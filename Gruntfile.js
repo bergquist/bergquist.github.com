@@ -83,11 +83,7 @@ module.exports = function(grunt) {
     },
     cssmin: {
       dist: {
-        files: {
-          'style.min.css': [
-              '.tmp/css/{,*/}*.css'
-          ]
-        }
+        files: { 'style.min.css': [ '.tmp/css/{,*/}*.css' ] }
       }
     },
     sass: {
