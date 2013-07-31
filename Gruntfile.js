@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         nospawn: true
       },
       sass: {
-        files: [ '/**/*.scss' ],
+        files: [ '**/*.scss' ],
         tasks: [ 'sass' ]
       },
       livereload: {
@@ -80,6 +80,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [ 'clean', 'sass', 'cssmin' ])
   grunt.registerTask('dev', [
+    'default',
     'connect:livereload',
     'open',
     'watch'
