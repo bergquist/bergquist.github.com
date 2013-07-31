@@ -6,15 +6,9 @@ var lrSnippet = require('connect-livereload')({
 var mountFolder = function(connect, dir) {
   return connect.static(require('path').resolve(dir))
 }
-var yeomanConfig = {
-  app: 'app',
-  dist: 'dist'
-}
 
 module.exports = function(grunt) {
   grunt.initConfig({
-    yeoman: yeomanConfig,
-
     watch: {
       options: {
         nospawn: true
