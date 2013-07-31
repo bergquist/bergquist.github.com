@@ -5,5 +5,5 @@ url:            http://localhost:4000
 server:         true
 auto:           true
 
-source:         .
-destination:    ./_site
+source:         ./src
+destination:    .jekyll

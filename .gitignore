@@ -1,6 +1,6 @@
 node_modules/
 .tmp/
 *.swp
-_site
+.jekyll
 .sass-cache
 .DS_Store

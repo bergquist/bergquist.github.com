@@ -15,15 +15,15 @@ module.exports = function(grunt) {
       },
       sass: {
         files: [ '**/*.scss' ],
-        tasks: [ 'sass' ]
+        tasks: [ 'sass', 'cssmin' ]
       },
       livereload: {
         options: {
           livereload: LIVERELOAD_PORT
         },
         files: [
-            '_site/**/*.html',
-            '.tmp/css/**/*.css'
+            '.jekyll/**/*.html',
+            'src/static/style.min.css'
         ]
       }
     },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             return [
               lrSnippet,
               mountFolder(connect, '.tmp'),
-              mountFolder(connect, '_site')
+              mountFolder(connect, '.jekyll')
             ]
           }
         }
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     },
     cssmin: {
       dist: {
-        files: { 'static/style.min.css': [ '.tmp/css/{,*/}*.css' ] }
+        files: { 'src/static/style.min.css': [ '.tmp/css/{,*/}*.css' ] }
       }
     },
     sass: {
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
-  grunt.registerTask('default', [ 'clean', 'sass', 'cssmin' ])
+  grunt.registerTask('default', [ 'clean', 'sass', 'cssmin', 'copy' ])
   grunt.registerTask('dev', [
     'default',
     'connect:livereload',
@@ -80,6 +80,9 @@ module.exports = function(grunt) {
     'watch'
   ])
 
-  grunt.registerTask('build', [])
-  grunt.registerTask('deploy', [])
+  grunt.registerTask('deploy', [
+    //clean src/static
+    //generate src/static
+    //commit changes
+    ])
 }
