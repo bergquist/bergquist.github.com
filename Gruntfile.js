@@ -29,8 +29,7 @@ module.exports = function(grunt) {
         },
         files: [
             '_site/**/*.html',
-            '.tmp/css/**/*.css',
-            '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js'
+            '.tmp/css/**/*.css'
         ]
       }
     },
@@ -52,17 +51,8 @@ module.exports = function(grunt) {
     },
     clean: {
       dist: {
-        files: [{
-            dot: true,
-            src: [
-                '.tmp',
-                '<%= yeoman.dist %>/*',
-                '!<%= yeoman.dist %>/.git*'
-            ]
-          }
-        ]
-      },
-      server: ['.tmp', '.jekyll']
+        files: [ { dot: true, src: [ '.tmp' ] } ]
+      }
     },
     open: {
       server: {
@@ -78,8 +68,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'scss',
-          src: [ 'style.scss' ],
+          src: [ 'scss/style.scss' ],
           dest: '.tmp/css',
           ext: '.css'
         }]
