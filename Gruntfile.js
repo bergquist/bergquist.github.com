@@ -1,7 +1,7 @@
 'use strict';
-var liveReloadPort = 35729
+var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({
-  port: liveReloadPort
+  port: LIVERELOAD_PORT
 })
 var mountFolder = function(connect, dir) {
   return connect.static(require('path').resolve(dir))
@@ -16,15 +16,21 @@ module.exports = function(grunt) {
     yeoman: yeomanConfig,
 
     watch: {
+      options: {
+        nospawn: true
+      },
+      sass: {
+        files: [ '/**/*.scss' ],
+        tasks: [ 'sass' ]
+      },
       livereload: {
         options: {
-          livereload: liveReloadPort
+          livereload: LIVERELOAD_PORT
         },
         files: [
             '_site/**/*.html',
             '.tmp/css/**/*.css',
-            '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-            '<%= yeoman.app %>/image/**/*.{gif,jpg,jpeg,png,svg,webp}'
+            '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js'
         ]
       }
     },
@@ -37,8 +43,9 @@ module.exports = function(grunt) {
           middleware: function(connect) {
             return [
               lrSnippet,
+              mountFolder(connect, '.tmp'),
               mountFolder(connect, '_site')
-              ]
+            ]
           }
         }
       }
@@ -64,14 +71,14 @@ module.exports = function(grunt) {
     },
     cssmin: {
       dist: {
-        files: { 'style.min.css': [ '.tmp/css/{,*/}*.css' ] }
+        files: { 'static/style.min.css': [ '.tmp/css/{,*/}*.css' ] }
       }
     },
     sass: {
       dist: {
         files: [{
           expand: true,
-          cwd: 'css',
+          cwd: 'scss',
           src: [ 'style.scss' ],
           dest: '.tmp/css',
           ext: '.css'
@@ -88,6 +95,7 @@ module.exports = function(grunt) {
     'open',
     'watch'
   ])
+
   grunt.registerTask('build', [])
   grunt.registerTask('deploy', [])
 }

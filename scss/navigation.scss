@@ -9,7 +9,7 @@
   display: inline-block;
   height: 30px; width: 30px;
   margin: 2px;
-  background: transparent url('social-media-spritemap.png') no-repeat -1px -1px;
+  background: transparent url('/static/social-media-spritemap.png') no-repeat -1px -1px;
   &.twitter { background-position: -65px -1px }
   &.rss { background-position: -97px -1px }
   &.linkedin { background-position: -33px -1px }
