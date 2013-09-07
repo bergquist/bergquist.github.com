@@ -6,4 +6,4 @@ server:         true
 auto:           true
 
 source:         ./src
-destination:    .jekyll
+destination:    _site
