@@ -81,8 +81,8 @@ module.exports = function(grunt) {
   ])
 
   grunt.registerTask('deploy', [
-    //clean src/static
-    //generate src/static
+    //clean static
+    //generate static
     //commit changes
-    ])
+  ])
 }
