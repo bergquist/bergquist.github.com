@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
-  grunt.registerTask('default', [ 'clean', 'sass', 'cssmin', 'copy' ])
+  grunt.registerTask('default', [ 'clean', 'sass', 'cssmin' ])
   grunt.registerTask('dev', [
     'default',
     'connect:livereload',
