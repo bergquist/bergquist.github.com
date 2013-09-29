@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         },
         files: [
             '.jekyll/**/*.html',
-            'src/static/style.min.css'
+            'static/style.min.css'
         ]
       }
     },
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     },
     cssmin: {
       dist: {
-        files: { 'src/static/style.min.css': [ '.tmp/css/{,*/}*.css' ] }
+        files: { 'static/style.min.css': [ '.tmp/css/{,*/}*.css' ] }
       }
     },
     sass: {
