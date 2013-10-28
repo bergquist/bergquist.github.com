@@ -3,7 +3,7 @@ layout: post
 title: Missing grunt error output in when using powershell
 ---
 <p>
-If you're using grunt in a powershell script for continues integration you might run into issues with the error output. It's because of a bug regarding subprocess and stdout flushing in subprocess ** link link (from opad skype chat).
+If you're using grunt in a powershell script for continues integration you might run into issues with the error output. It's because of a bug regarding subprocess and <a href="https://github.com/joyent/node/issues/3871">stdout flushing in subprocess</a>
 </p>
 <p>
 <span class="bold">Solution</span>:
