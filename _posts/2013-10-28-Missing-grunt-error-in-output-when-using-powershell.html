@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Missing grunt error output in build log
+title: Missing grunt error output in when using powershell
 ---
 
-If you're using grunt on a windows machine for continues integration you might run into issues with the error output. It's because of a bug regarding subprocess and stdout flushing in subprocess ** link link (from opad skype chat).
+If you're using grunt in a powershell script for continues integration you might run into issues with the error output. It's because of a bug regarding subprocess and stdout flushing in subprocess ** link link (from opad skype chat).
 
 Solution:
 Instead of writing directly to stdout we should pipe all output to a file, use the windows command type to output it and then delete the file. Like this.
