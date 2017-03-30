@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+<body class="section-{{ if .IsPage }}{{ .Type }}{{ end }}">
+
+{{ partial "sidebar.html" . }}
+
+    <div class="main content container">
+
+        <ul id="list">
+            {{ range .Pages }}
+                {{ .Render "li"}}
+            {{ end }}
+        </ul>
+    </div>
+
+{{ partial "footer.html" . }}

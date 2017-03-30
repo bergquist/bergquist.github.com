@@ -1,0 +1,5 @@
+languageCode = "en-us"
+title = "Carl Bergquist"
+baseURL = "http://example.org/"
+#publishDir = "docs"
+verbose = true
