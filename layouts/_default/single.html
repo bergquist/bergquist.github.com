@@ -6,7 +6,9 @@
 
 	<section class="main content container">
 		<h2>{{ .Title }}</h2>
-		{{ .Date.Format "2 Jan, 2006" }}
+		{{ if isset .Params "date" }}
+			{{ .Date.Format "2 Jan, 2006" }}
+		{{end}}
 		<article>
 		{{ .Content }}
 		</article>

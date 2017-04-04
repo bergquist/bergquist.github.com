@@ -1,5 +1,4 @@
 languageCode = "en-us"
 title = "Carl Bergquist"
-baseURL = "http://example.org/"
-#publishDir = "docs"
+baseURL = "http://www.bergquist.eu"
 verbose = true
