@@ -18,15 +18,9 @@
 		<meta name="twitter:site" content="@carlbergquist">
 		<meta name="twitter:url" content="https://twitter.com/carlbergquist" />
 		<meta name="twitter:title" content="{{ .Title }}">
+		<meta name="twitter:image" content="https://www.bergquist.eu/social-media-image.png" />
 
-		{{ if and ((.IsPage) (isset .Params "cover_image")) }}
-			<meta name="twitter:image" content="{{ default "" (index .Params "cover_image") | absURL }}" />
-			<meta property="og:image" content="{{ default "" (index .Params "cover_image") | absURL }}" />
-		{{ else}}
-			<meta name="twitter:image" content="http://grafana.org/assets/img/docs/nice_dashboard.png" />
-			<meta property="og:image" content="http://grafana.org/assets/img/docs/nice_dashboard.png" />
-		{{ end }}
-
+		<meta property="og:image" content="https://www.bergquist.eu/social-media-image.png" />
 		<meta property="og:site_name" content="www.bergquist.eu" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="{{ .Title }}" />
