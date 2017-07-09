@@ -1,4 +1,4 @@
 languageCode = "en-us"
 title = "Carl Bergquist"
-baseURL = "http://www.bergquist.eu"
+baseURL = "https://www.bergquist.eu"
 verbose = true
