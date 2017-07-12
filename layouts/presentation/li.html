@@ -1,21 +1,20 @@
 <li>
+	<div class="meta">{{ .Date.Format "2006-01-02" }}</div>	
 	{{ if isset .Params "link" }}
 		<a href="{{ .Params.Link }}">{{ .Params.Title }}</a>
 	{{else}}
 		{{ .Params.Title }}
 	{{end}}
 
-	{{ if isset .Params "slides" }}
-		<a href="{{ .Params.Slides }}">slides</a>
-	{{end}}
-
 	<span>
 	{{ .Params.Description }}
 	</span>
 	
+	{{ if isset .Params "slides" }}
+		<a href="{{ .Params.Slides }}">slides</a>
+	{{end}}
+
 	{{ if isset .Params "video" }}
 		<a href="{{ .Params.Video }}">video</a>
 	{{end}}
-
-	<div class="meta">{{ .Date.Format "2006-01-02" }}</div>	
 </li>
