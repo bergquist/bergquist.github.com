@@ -1,10 +1,13 @@
 <li class="presentation-lite-item">
-	<span class="date">{{ .Date.Format "2006-01-02" }}</span>	
+	<h4>
 	{{ if isset .Params "link" }}
 		<a href="{{ .Params.Link }}">{{ .Params.Title }}</a>
 	{{else}}
 		{{ .Params.Title }}
 	{{end}}
+	@
+	<span class="date"> {{ .Params.Conf }} {{ .Date.Format "2006" }}</span>	
+	</h4>
 
 	<p>
 	{{ .Params.Description }}
