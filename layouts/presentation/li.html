@@ -1,7 +1,7 @@
 <li class="presentation-lite-item">
 	<h4>
 	{{ if isset .Params "link" }}
-		<a href="{{ .Params.Link }}">{{ .Params.Title }}</a>
+		<a class="tile-link" href="{{ .Params.Link }}">{{ .Params.Title }}</a>
 	{{else}}
 		{{ .Params.Title }}
 	{{end}}

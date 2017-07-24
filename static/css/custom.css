@@ -6,6 +6,23 @@
     padding-right: 1em;
 }
 
+#list>li {
+    display: table;
+    width: 100%;
+}
+
+#list>li>.title-link {
+    display: table-cell;
+    text-align: left;
+    width: 75%;
+}
+
+#list>li>.meta {
+    display: table-cell;
+    text-align: right;
+    width: 25%;
+}
+
 #list {
     list-style: none;
 }
