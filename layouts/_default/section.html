@@ -5,8 +5,7 @@
 {{ partial "sidebar.html" . }}
 
     <div class="main content container">
-
-        <ul id="list">
+        <ul id="list" class="section-list">
             {{ range .Pages }}
                 {{ .Render "li"}}
             {{ end }}

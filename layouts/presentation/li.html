@@ -14,10 +14,10 @@
 	</p>
 	
 	{{ if isset .Params "slides" }}
-		<a class="fa fa-pencil"href="{{ .Params.Slides }}">slides</a>
+		<a class="presentation-list-link fa fa-pencil" href="{{ .Params.Slides }}">slides</a>
 	{{end}}
 
 	{{ if isset .Params "video" }}
-		<a class="fa fa-video-camera"href="{{ .Params.Video }}">video</a>
+		<a  class="presentation-list-link fa fa-video-camera"href="{{ .Params.Video }}">video</a>
 	{{end}}
 </li>
