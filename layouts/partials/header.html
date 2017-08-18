@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Carl Bergquist - {{ if .Title }}{{ .Title }}{{ end }}</title>
+		<title>Carl Bergquist{{ if .Title }} - {{ .Title }}{{ end }}</title>
 
 		<meta name="author" content="Carl Bergquist" />
 		<meta name="keywords" content="{{ with .Keywords }}{{ delimit . ","}}{{ else }}Carl, Bergquist, Carl Bergquist, Grafana{{end}}">
