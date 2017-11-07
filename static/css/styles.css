@@ -61,10 +61,10 @@ html {
 }
 
 body {
-  color: #515151;
-  background-color: #fff;
+  color: #111111;
+  background-color: #fffff8;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
@@ -531,7 +531,7 @@ html {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #202020;
+  background-color: #111111;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -546,12 +546,12 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #fffff8;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #fffff8;
   margin-top: 0;
   font-family: "Abril Fatface", serif;
   font-size: 3.25rem;
