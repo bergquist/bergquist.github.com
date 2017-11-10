@@ -13,7 +13,7 @@ If you're using grunt in a powershell script for continues integration you might
 Instead of writing directly to stdout we should pipe all output to a file, use the windows command type to output it and then delete the file. Like this.
 </p>
 <pre>
-  <code class="powershell">
+  <code class="language-powershell">
 grunt build --no-color > grunt.tmp
 type grunt.tmp
 del grunt.tmp

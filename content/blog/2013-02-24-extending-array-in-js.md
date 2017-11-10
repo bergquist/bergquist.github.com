@@ -10,31 +10,21 @@ I was working on a small side project when I wanted to extend an javascript arra
 I'm gonna try to explain how it works.
 push() adds and element to an array ex
 
-<pre>
-	<code class="javascript">
-    var a = [ 1, 2 ];
+<pre><code class="language-javascript">    var a = [ 1, 2 ];
     a.push(3);
     console.log(a);
-    // [ 1, 2, 3 ]
-	</code>
-</pre>
+    // [ 1, 2, 3 ]</code></pre>
 
 But you can also give push more parameters. ex
 
-<pre>
-    <code class="javascript">
-    var a = [ 1, 2 ];
+<pre><code class="language-javascript">    var a = [ 1, 2 ];
     a.push(3, 4);
     console.log(a);
-    // [ 1, 2, 3, 4 ]
-    </code>
-</pre>
+    // [ 1, 2, 3, 4 ]</code></pre>
 
 What apply does is that it allow you to execute an mehtod on another object. ex
 
-<pre>
-    <code class="javascript">
-    var sparkles = {
+<pre><code class="language-javascript">    var sparkles = {
         name: 'Sparkles',
         sayHello: function() {
             console.log('Hi. My name is ' + this.name)
@@ -46,17 +36,12 @@ What apply does is that it allow you to execute an mehtod on another object. ex
     };
 
     sparkles.sayHello.apply(rainbowdash);
-    // 'Hi. My name is rainbowdash'
-
-    </code>
-</pre>
+    // 'Hi. My name is rainbowdash'</code></pre>
 
 Apply also takes a second argument which is an array of arguments that
 should be passed to the invoked method.
 
-<pre>
-    <code class="javascript">
-    var sparkles = {
+<pre><code class="language-javascript">    var sparkles = {
         name: 'Sparkles',
         sayHello: function(phrase, who) {
             console.log(phrase + ' ' + who + '. My name is ' + this.name);
@@ -64,15 +49,9 @@ should be passed to the invoked method.
     };
 
     sparkles.sayHallo.apply(rainbowdash, [ 'Hi', sparkles' ]);
-    // 'Hi sparkles. My name is rainbowdash'
-    </code>
-</pre>
+    // 'Hi sparkles. My name is rainbowdash'</code></pre>
 
 So what happens is..
-<pre>
-    <code class="javascript">
-    a.push.apply(a, b) turns into a.push(4, 5, 6);
-    </code>
-</pre>
+<pre><code class="language-javascript">    a.push.apply(a, b) turns into a.push(4, 5, 6);</code></pre>
 
 Awesome!
