@@ -1,6 +1,6 @@
 publish: 
 	hugo
-	gsutil rsync -R public gs://www.bergquist.eu
+	firebase deploy
 
 dev:
 	hugo -w serve
