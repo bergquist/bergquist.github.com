@@ -4,3 +4,6 @@ public/
 *.swp
 .sass-cache
 .DS_Store
+
+.firebase/
+firebase-debug.log
